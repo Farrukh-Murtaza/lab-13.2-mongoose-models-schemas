@@ -1,4 +1,5 @@
-require("dotenv").config();
+require("dotenv").config(); 
+require("./db/connection");
 const express = require("express");
 const morgan = require("morgan")
 const app = express();
@@ -13,7 +14,7 @@ app.use(express.json());
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running at localhost:${PORT}`);
+    console.log(`Server is running at http://localhost:${PORT}`);
 });
 
 
